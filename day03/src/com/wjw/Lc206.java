@@ -35,6 +35,7 @@ public class Lc206 {
 
     public static ListNode reverseList(ListNode head) {
         ListNode last = null;
+        // 上面的方法是将变量实现提取出来
         while (head != null) {
             ListNode headNext = head.next;
             head.next = last;
