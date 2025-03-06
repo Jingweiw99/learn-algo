@@ -8,12 +8,8 @@ import java.util.List;
  */
 public class Test1 {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("1");
-        
-        sb.deleteCharAt(sb.length()-1);
         Test1 test = new Test1();
-        test.generateParenthesis(1);
+        System.out.println(test.generateParenthesis(1));
     }
     public List<String> generateParenthesis(int n) {
         if (n == 0) return new ArrayList<>();
@@ -37,6 +33,7 @@ public class Test1 {
         }
         // 当所有括号都恰好用完时，得到一个合法的括号组合
         if (left == 0 && right == 0) {
+            System.out.println(track.toString());
             res.add(track.toString());
             return;
         }

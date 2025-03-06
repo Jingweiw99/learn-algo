@@ -16,7 +16,7 @@ public class Lc236 {
             return root;
         }
         TreeNode left = find(root.left, val1, val2);
-        TreeNode right = find(root.right, val1, val2);
+        TreeNode right = find(root.rightright, val1, val2);
         if (left != null && right != null) {
             return root;
         }
