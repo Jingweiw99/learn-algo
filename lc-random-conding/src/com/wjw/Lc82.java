@@ -30,6 +30,28 @@ public class Lc82 {
         return dummy.next;
     }
 
+    public ListNode deleteDuplicates2(ListNode head) {
+        // 当前指针 p1 用于指向需要的值 p枚举
+        ListNode dummy = new ListNode(-1, head), p1 = dummy;
+        ListNode p = head;
+        while (p != null) {
+            int val = p.val;
+            if (p.next != null && val == p.next.val) {
+                while (p != null && val == p.val) {
+                    p = p.next;
+                }
+                if(p == null) {
+                    p1.next = null;
+                }
+            } else {
+                p1.next = p;
+                p1 = p1.next;
+                p = p.next;
+            }
+        }
+        return dummy.next;
+    }
+
     public static void main(String[] args) {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(3, new ListNode(3, new ListNode(4))))));
 //        ListNode head = new ListNode(1, new ListNode(2, new ListNode(2)));

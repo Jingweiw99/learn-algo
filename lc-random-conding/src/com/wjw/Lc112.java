@@ -28,7 +28,7 @@ public class Lc112 {
             int sz = q.size();
             for (int i = 0; i < sz; i++) {
                 Node cur = q.poll();
-                if (cur.node.left == null && cur.node.rightright == null) {
+                if (cur.node.left == null && cur.node.right == null) {
                     if (cur.val == targetSum) {
                         return true;
                     }
@@ -37,8 +37,8 @@ public class Lc112 {
                 if (cur.node.left != null) {
                     q.offer(new Node(cur.node.left, cur.val + cur.node.left.val));
                 }
-                if (cur.node.rightright != null) {
-                    q.offer(new Node(cur.node.rightright, cur.val + cur.node.rightright.val));
+                if (cur.node.right != null) {
+                    q.offer(new Node(cur.node.right, cur.val + cur.node.right.val));
                 }
             }
         }

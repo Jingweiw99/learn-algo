@@ -13,7 +13,7 @@ public class Lc538 {
 
     private void traverse(TreeNode root) {
         if (root == null) return;
-        traverse(root.rightright);
+        traverse(root.right);
         sum += root.val;
         root.val = sum;
         traverse(root.left);

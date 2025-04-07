@@ -28,7 +28,7 @@ public class Lc106 {
         int preLen = rootIndex - inStart;
         TreeNode root = new TreeNode(rootVal);
         root.left = build(inorder, inStart, rootIndex - 1, postorder, postStart, postStart + preLen - 1);
-        root.rightright = build(inorder, rootIndex + 1, inEnd, postorder, postStart + preLen, postEnd - 1);
+        root.right = build(inorder, rootIndex + 1, inEnd, postorder, postStart + preLen, postEnd - 1);
         return root;
     }
 

@@ -22,7 +22,7 @@ public class QuickSort {
     }
 
     /*
-    排序号基准点上的值，并返回基准点的索引
+    排序好基准点上的值，并返回基准点的索引
     步骤：
     随机选取一个基准点
     与最右侧的交换
@@ -36,7 +36,7 @@ public class QuickSort {
         swap(arr, pivot, right);
         int j = left;
         for (int i = left; i < right; i++) {
-            if (arr[i] <= val) {
+            if (arr[i] <= val) { // 这里设置小于等于都加入到左边了
                 swap(arr, i, j);
                 j++;
             }

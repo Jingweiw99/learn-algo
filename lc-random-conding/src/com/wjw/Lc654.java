@@ -30,7 +30,7 @@ public class Lc654 {
         }
         TreeNode root = new TreeNode(maxVal);
         root.left = build(nums, start, index - 1);
-        root.rightright = build(nums, index + 1, end);
+        root.right = build(nums, index + 1, end);
         return root;
     }
 }

@@ -16,13 +16,13 @@ public class BubbleSort {
     }
 
     /*
-    冒泡排序：i = n - 1 ~ 0 排序
-    然后每次 j = 0 - end - 1  与后面一个交换
+    冒泡排序：i = n - 1 ~ 1 排序
+    然后每次 j = 0 - i - 1  与后面一个交换
      */
     private static void bubbleSort(int[] arr) {
         if (arr == null || arr.length <= 1) return;
         int n = arr.length;
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     swap(arr, j, j + 1);

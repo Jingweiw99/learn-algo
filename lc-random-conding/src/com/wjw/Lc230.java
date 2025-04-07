@@ -22,7 +22,7 @@ public class Lc230 {
             res = root.val;
             return;
         }
-        traverse(root.rightright, k);
+        traverse(root.right, k);
     }
 
     public static void main(String[] args) {
